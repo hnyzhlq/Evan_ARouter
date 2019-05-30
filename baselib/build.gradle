@@ -1,0 +1,43 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion build_versions.target_sdk
+    defaultConfig {
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api deps.support.v13
+    api deps.support.app_compat
+    api deps.support.recyclerview
+    api deps.support.multidex
+    api deps.constraint_layout
+    api deps.squareup.okhttp
+    api deps.squareup.okhttp_urlconnection
+    api deps.fastjson
+    api deps.glide
+    annotationProcessor deps.glide_compiler
+//    api 'com.android.support:appcompat-v7:28.0.0'
+//    api 'com.github.bumptech.glide:glide:4.4.0'
+//    api 'com.squareup.okhttp3:okhttp:3.8.1'
+//    api 'com.squareup.okhttp3:okhttp-urlconnection:3.8.1'
+//    api 'com.alibaba:fastjson:1.2.44'
+//    api 'com.alibaba:fastjson:1.1.67.android'
+//    annotationProcessor 'com.github.bumptech.glide:compiler:4.4.0'
+}

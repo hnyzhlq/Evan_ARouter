@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.evan.arouter_read" >
+    <application android:theme="@style/AppTheme.NoActionBar">
+        <activity
+            android:name="com.evan.arouter_read.business.readlist.ReadListActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+    </application>
+
+</manifest>

@@ -1,0 +1,1 @@
+include ':app', ':arouter_read', ':baselib', ':arouter_share', ':arouter_componentservice'
